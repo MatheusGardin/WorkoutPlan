@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('visible')->default(true);
-            $table->unsignedBigInteger('set_id')->index();
+            $table->unsignedBigInteger('user_id')->index();
             $table->timestamps();
         });
     }
