@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('visible')->default(true);
             $table->unsignedBigInteger('user_id')->index();
+            $table->unique(['name', 'user_id']);
             $table->timestamps();
         });
     }
